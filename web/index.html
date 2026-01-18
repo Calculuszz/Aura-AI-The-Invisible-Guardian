@@ -1,224 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aura - Privacy-First Fall Detection</title>
+    <title>Aura AI — Shoplifting & Fall Detection</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="nav-brand">
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                    <path d="M16 4L4 10V22L16 28L28 22V10L16 4Z" stroke="url(#gradient)" stroke-width="2" fill="none"/>
-                    <defs>
-                        <linearGradient id="gradient" x1="4" y1="4" x2="28" y2="28">
-                            <stop offset="0%" stop-color="#00ff88"/>
-                            <stop offset="100%" stop-color="#00ccff"/>
-                        </linearGradient>
-                    </defs>
+            <a href="#" class="nav-brand">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                    stroke-linecap="round" stroke-linejoin="round" class="gradient-text">
+                    <path
+                        d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
                 </svg>
-                <span>Aura</span>
-            </div>
+                <span>AURA AI</span>
+            </a>
             <div class="nav-links">
-                <a href="#demo">Live Demo</a>
+                <a href="#how-it-works">How it works</a>
                 <a href="#features">Features</a>
-                <a href="#privacy">Privacy</a>
-                <a href="#contact" class="btn-primary">Get Started</a>
+                <a href="#demo">Live Demo</a>
+                <a href="#demo" class="btn btn-primary">Book a Demo</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="hero-bg"></div>
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Privacy First.<br/>
-                    <span class="gradient-text">Always Connected.</span>
-                </h1>
-                <p class="hero-subtitle">AI Fall Detection, Reimagined. No cameras. No recordings. Just pure skeletal intelligence.</p>
-                <div class="hero-cta">
-                    <button class="btn-large btn-primary" onclick="scrollToDemo()">
-                        <span>Try Live Demo</span>
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </button>
-                    <button class="btn-large btn-secondary">Learn More</button>
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Safety Without <span class="gradient-text">Surveillance.</span></h1>
+                    <p class="hero-subtitle">Aura AI protects your space and your privacy. Real-time fall detection
+                        using skeletal intelligence—no recordings, no cloud, no compromise.</p>
+                    <div class="hero-actions">
+                        <a href="#demo" class="btn btn-primary">See Aura in Action</a>
+                        <a href="#how-it-works" class="btn btn-outline">How it works</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Live Demo Section -->
-    <section class="demo-section" id="demo">
-        <div class="container">
-            <h2 class="section-title">Experience Privacy in Real-Time</h2>
-            <p class="section-subtitle">Your camera never leaves your device. Only skeletal data is processed.</p>
-            
-            <div class="demo-container">
-                <div class="demo-card glass">
+        <!-- Use Case / Problem -->
+        <section class="light-section" id="how-it-works">
+            <div class="container">
+                <span class="section-label">Privacy First</span>
+                <h2 class="section-title">Anonymized security that alerts you in real-time.</h2>
+                <p class="section-subtitle">Aura plugs into your existing vision systems and provides instant fall
+                    alerts—no extra hardware required and zero facial data stored.</p>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🔍</div>
+                        <h3>Skeletal Intel</h3>
+                        <p>We only see 33 points of movement. Your identity stays hidden while your safety is
+                            guaranteed.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Instant Alerts</h3>
+                        <p>Get notified within 3 seconds of a confirmed incident. Every millisecond counts.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>Zero Cloud</h3>
+                        <p>All processing happens on the edge. Your data never leaves your premises.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Demo -->
+        <section class="demo-section" id="demo">
+            <div class="container">
+                <span class="section-label">Interactive Experience</span>
+                <h2 class="section-title">The Privacy Mirror</h2>
+                <p class="section-subtitle">Test our AI logic right now. Aura processes your pose locally in your
+                    browser to detect falls without revealing your face.</p>
+
+                <div class="demo-wrapper">
                     <div class="demo-header">
-                        <div class="status-indicator" id="statusIndicator">
-                            <div class="status-dot"></div>
-                            <span id="statusText">READY</span>
+                        <div class="status-pills">
+                            <div class="pill active" id="pillStatus">STATUS: <span id="statusText">READY</span></div>
+                            <div class="pill" id="pillAngle">ANGLE: <span id="angleText">--</span>°</div>
                         </div>
-                        <div class="demo-stats">
-                            <span id="angleDisplay">Angle: --°</span>
-                            <span id="velocityDisplay">Velocity: --</span>
+                        <div class="demo-actions">
+                            <button class="btn btn-outline" id="startBtn" onclick="startDemo()">Start Test</button>
+                            <button class="btn btn-outline" id="stopBtn" onclick="stopDemo()"
+                                style="display:none;">Stop</button>
                         </div>
                     </div>
-                    
-                    <div class="video-container">
+
+                    <div class="video-box">
                         <video id="webcam" autoplay playsinline></video>
                         <canvas id="output"></canvas>
-                        <div class="privacy-badge">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M8 2L3 4V8C3 11 8 14 8 14C8 14 13 11 13 8V4L8 2Z" stroke="#00ff88" stroke-width="1.5" fill="none"/>
+                        <div class="demo-overlay">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
                             </svg>
-                            <span>Privacy Mode Active</span>
+                            PRIVACY ENCRYPTION ACTIVE
                         </div>
                     </div>
-
-                    <div class="demo-controls">
-                        <button class="btn-control" id="startBtn" onclick="startDemo()">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                                <circle cx="10" cy="10" r="8"/>
-                            </svg>
-                            Start Camera
-                        </button>
-                        <button class="btn-control" id="stopBtn" onclick="stopDemo()" style="display:none;">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                                <rect x="6" y="6" width="8" height="8"/>
-                            </svg>
-                            Stop
-                        </button>
-                    </div>
-                </div>
-
-                <div class="demo-info">
-                    <div class="info-card glass">
-                        <div class="info-icon">👁️</div>
-                        <h3>What You See</h3>
-                        <p>Only a skeletal representation. No facial features, no identifiable information.</p>
-                    </div>
-                    <div class="info-card glass">
-                        <div class="info-icon">🔒</div>
-                        <h3>What We Store</h3>
-                        <p>Nothing. All processing happens locally in your browser. Zero cloud uploads.</p>
-                    </div>
-                    <div class="info-card glass">
-                        <div class="info-icon">⚡</div>
-                        <h3>How It Works</h3>
-                        <p>AI detects 33 body landmarks. If horizontal for 3+ seconds, alert is triggered.</p>
-                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Features Section -->
-    <section class="features-section" id="features">
+        <!-- CTA -->
+        <section class="light-section">
+            <div class="container">
+                <div class="cta-card"
+                    style="text-align: center; border-radius: 2rem; background: var(--bg-dark); color: white; padding: 4rem;">
+                    <h2 class="section-title" style="margin-bottom: 2rem;">Ready to upgrade your safety?</h2>
+                    <a href="#" class="btn btn-primary" style="padding: 1.25rem 3rem;">Book a Free Demo</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
         <div class="container">
-            <h2 class="section-title">Built for Safety & Privacy</h2>
-            <div class="features-grid">
-                <div class="feature-card glass">
-                    <div class="feature-icon">🧠</div>
-                    <h3>Advanced Physics Engine</h3>
-                    <p>Torso angle analysis prevents false alarms from sitting or bending.</p>
-                </div>
-                <div class="feature-card glass">
-                    <div class="feature-icon">🔔</div>
-                    <h3>Instant Alerts</h3>
-                    <p>Telegram, Email, or Webhook notifications within seconds of detection.</p>
-                </div>
-                <div class="feature-card glass">
-                    <div class="feature-icon">📊</div>
-                    <h3>Smart Dashboard</h3>
-                    <p>Real-time metrics: velocity, body angle, and historical event logs.</p>
-                </div>
-                <div class="feature-card glass">
-                    <div class="feature-icon">🎯</div>
-                    <h3>99% Accuracy</h3>
-                    <p>Smoothing algorithms reduce jitter and improve detection reliability.</p>
-                </div>
+            <div class="footer-nav">
+                <a href="#how-it-works">How it works</a>
+                <a href="#features">Features</a>
+                <a href="#demo">Live Demo</a>
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
             </div>
-        </div>
-    </section>
-
-    <!-- Privacy Comparison -->
-    <section class="privacy-section" id="privacy">
-        <div class="container">
-            <h2 class="section-title">Your Privacy, Guaranteed</h2>
-            <div class="comparison-container glass">
-                <div class="comparison-side">
-                    <h3>Traditional Cameras</h3>
-                    <div class="comparison-image">
-                        <div class="blur-overlay">BLURRED FOR DEMO</div>
-                    </div>
-                    <ul class="comparison-list bad">
-                        <li>❌ Full video recording</li>
-                        <li>❌ Cloud storage required</li>
-                        <li>❌ Identifiable faces</li>
-                        <li>❌ Privacy concerns</li>
-                    </ul>
-                </div>
-                <div class="vs-divider">VS</div>
-                <div class="comparison-side">
-                    <h3>Aura Skeleton</h3>
-                    <div class="comparison-image skeleton-demo">
-                        <canvas id="skeletonPreview"></canvas>
-                    </div>
-                    <ul class="comparison-list good">
-                        <li>✅ Skeletal data only</li>
-                        <li>✅ Local processing</li>
-                        <li>✅ Zero facial data</li>
-                        <li>✅ GDPR compliant</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content glass">
-                <h2>Ready to Protect Your Loved Ones?</h2>
-                <p>Deploy Aura in minutes. No hardware required.</p>
-                <div class="cta-buttons">
-                    <button class="btn-large btn-primary">Start Free Trial</button>
-                    <button class="btn-large btn-secondary">View Documentation</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <path d="M16 4L4 10V22L16 28L28 22V10L16 4Z" stroke="url(#gradient2)" stroke-width="2" fill="none"/>
-                        <defs>
-                            <linearGradient id="gradient2" x1="4" y1="4" x2="28" y2="28">
-                                <stop offset="0%" stop-color="#00ff88"/>
-                                <stop offset="100%" stop-color="#00ccff"/>
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                    <span>Aura</span>
-                </div>
-                <p>© 2026 Aura AI. Privacy-first fall detection.</p>
-            </div>
+            <p class="copyright">© 2026 AURA AI. All rights reserved.</p>
         </div>
     </footer>
 
@@ -228,4 +141,5 @@
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js"></script>
     <script src="app.js"></script>
 </body>
+
 </html>

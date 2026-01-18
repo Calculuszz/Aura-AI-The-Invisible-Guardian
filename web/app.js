@@ -164,22 +164,34 @@ function analyzeFall(landmarks) {
 
 // Update UI
 function updateUI(status, velocity, angle) {
-    const indicator = document.getElementById('statusIndicator');
     const statusText = document.getElementById('statusText');
-    const angleDisplay = document.getElementById('angleDisplay');
-    const velocityDisplay = document.getElementById('velocityDisplay');
+    const angleText = document.getElementById('angleText');
+    const pillStatus = document.getElementById('pillStatus');
 
-    statusText.textContent = status;
-    angleDisplay.textContent = `Angle: ${Math.round(angle)}°`;
-    velocityDisplay.textContent = `Velocity: ${velocity.toFixed(2)}`;
+    if (statusText) statusText.textContent = status;
+    if (angleText) angleText.textContent = Math.round(angle);
 
-    indicator.className = 'status-indicator';
-    if (status === "POTENTIAL_FALL") {
-        indicator.classList.add('warning');
-        beep(1000, 200);
-    } else if (status === "FALL_DETECTED") {
-        indicator.classList.add('danger');
-        beep(2500, 400);
+    if (pillStatus) {
+        // Reset classes
+        pillStatus.style.background = 'rgba(255, 255, 255, 0.05)';
+        pillStatus.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+        pillStatus.style.color = '#a1a1aa';
+
+        if (status === "POTENTIAL_FALL") {
+            pillStatus.style.background = 'rgba(245, 158, 11, 0.1)';
+            pillStatus.style.borderColor = '#f59e0b';
+            pillStatus.style.color = '#f59e0b';
+            beep(1000, 200);
+        } else if (status === "FALL_DETECTED") {
+            pillStatus.style.background = 'rgba(239, 68, 68, 0.1)';
+            pillStatus.style.borderColor = '#ef4444';
+            pillStatus.style.color = '#ef4444';
+            beep(2500, 400);
+        } else if (status === "NORMAL" || status === "READY") {
+            pillStatus.style.background = 'rgba(168, 85, 247, 0.1)';
+            pillStatus.style.borderColor = '#a855f7';
+            pillStatus.style.color = '#a855f7';
+        }
     }
 }
 
@@ -194,9 +206,9 @@ function drawSkeleton(canvasCtx, landmarks, width, height, status) {
     if (!landmarks) return;
 
     // Color based on status
-    let color = '#00ff88';
-    if (status === "POTENTIAL_FALL") color = '#ffa500';
-    if (status === "FALL_DETECTED") color = '#ff0000';
+    let color = '#a855f7';
+    if (status === "POTENTIAL_FALL") color = '#f59e0b';
+    if (status === "FALL_DETECTED") color = '#ef4444';
 
     // Connections
     const connections = [

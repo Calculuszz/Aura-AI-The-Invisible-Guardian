@@ -6,6 +6,7 @@ Aura AI is a high-performance fall detection system designed for homes and elder
 ---
 
 ## 🌟 Key Highlights
+*   **Professional Lexius-style UI**: A state-of-the-art, responsive landing page with a dark/light transitional theme and premium glassmorphism.
 *   **Privacy-Safe Monitoring**: Renders only stick-figure representations. No faces, no recognizable features.
 *   **Physics-Based Detection**: Uses a combination of "Head Drop Velocity" and "Torso Angle Analysis" to differentiate between a real fall and just sitting down.
 *   **Zero-Cloud Processing**: All Heavy-lifting AI (MediaPipe) runs locally on your machine or browser.
@@ -15,10 +16,10 @@ Aura AI is a high-performance fall detection system designed for homes and elder
 
 ## 📁 Project Structure
 ```text
-├── web/                  # Premium Interactive Landing Page & Web Demo
-│   ├── index.html        # Glassmorphism UI
+├── web/                  # Premium Professional Landing Page (Responsive)
+│   ├── index.html        # Lexius-style structure (Hero, Features, Live Demo)
 │   ├── app.js            # Browser-based Pose Detection (MediaPipe JS)
-│   └── styles.css        # Modern design system
+│   └── styles.css        # Premium Design System (Inter font, Purple Gradients)
 ├── main.py               # Local Desktop Application controller
 ├── detector.py           # Core Logic: Pose estimation & Fall Analysis
 ├── renderer.py           # Privacy Engine: Skeleton rendering
